@@ -9,7 +9,7 @@ Summary: 	Views and transfers data to a Garmin GPS receiver
 Version: 	%{version}
 Release: 	%{release}
 Source0:	http://ufpr.dl.sourceforge.net/sourceforge/qlandkarte/%{oname}.%{version}.tar.gz
-URL:		http://qlandkarte.sourceforge.net/
+URL:		http://qlandkartegt.sourceforge.net/
 License:	GPLv2+
 Group:		Communications
 BuildRoot:	%{_tmppath}/%{name}-buildroot
