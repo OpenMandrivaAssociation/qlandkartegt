@@ -63,3 +63,4 @@ EOF
 %defattr(-,root,root)
 %{_bindir}/*
 %{_datadir}/applications/*.desktop
+%{_datadir}/pixmaps/qlandkartegt.png
