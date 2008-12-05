@@ -64,3 +64,4 @@ EOF
 %{_bindir}/*
 %{_datadir}/applications/*.desktop
 %{_datadir}/pixmaps/qlandkartegt.png
+%{_mandir}/man1/*
