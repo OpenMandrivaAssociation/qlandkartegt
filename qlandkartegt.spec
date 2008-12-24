@@ -1,7 +1,7 @@
 %define name	qlandkartegt
 %define oname	QLandkarteGT
-%define version	0.9.1
-%define reldate	2008.12.05
+%define version	0.9.2
+%define reldate	2008.12.23
 %define release %mkrel 1
 
 Name: 	 	%{name}
@@ -35,19 +35,6 @@ PC as well as on a portable device such as PPCs.
 %install
 rm -rf $RPM_BUILD_ROOT
 %makeinstall_std -C build
-
-mkdir -p %buildroot%_libdir/qlandkarte, %buildroot%_datadir/applications
-cat > %buildroot%_datadir/applications/mandriva-%name.desktop <<EOF
-[Desktop Entry]
-Name=QLandkarteGT
-Exec=qlandkartegt
-Icon=qlandkarte
-Terminal=false
-Type=Application
-X-MultipleArgs=false
-Categories=Qt;Utility;Geography;DataVisualization;
-GenericName=Garmin GPS utility
-EOF
 
 %if %mdkversion < 200900
 %post
