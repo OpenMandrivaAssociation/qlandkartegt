@@ -17,6 +17,7 @@ BuildRequires:	cmake
 BuildRequires:	qt4-devel
 BuildRequires:	gdal-devel
 BuildRequires:	proj-devel
+BuildRequires:	grass
 BuildRequires:	desktop-file-utils
 Obsoletes:	qlandkarte < %version
 Provides:	qlandkarte = %version
