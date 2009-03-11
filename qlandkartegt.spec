@@ -50,6 +50,7 @@ rm -rf $RPM_BUILD_ROOT
 %files 
 %defattr(-,root,root)
 %{_bindir}/*
+%{_datadir}/%{name}
 %{_datadir}/applications/*.desktop
 %{_datadir}/pixmaps/qlandkartegt.png
 %{_mandir}/man1/*
