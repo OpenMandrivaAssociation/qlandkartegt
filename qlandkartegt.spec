@@ -1,6 +1,6 @@
 %define name	qlandkartegt
 %define oname	QLandkarteGT
-%define version	0.11.0
+%define version	0.11.1
 %define reldate	2009.03.09
 %define release %mkrel 1
 
@@ -8,7 +8,7 @@ Name: 	 	%{name}
 Summary: 	Views and transfers data to a Garmin GPS receiver
 Version: 	%{version}
 Release: 	%{release}
-Source0:	http://ufpr.dl.sourceforge.net/sourceforge/qlandkartegt/%{oname}.%{version}.tar.gz
+Source0:	http://ufpr.dl.sourceforge.net/sourceforge/qlandkartegt/%{name}-%{version}.tar.gz
 URL:		http://qlandkartegt.sourceforge.net/
 License:	GPLv2+
 Group:		Communications
@@ -27,7 +27,7 @@ This is a raster map tool chain to view map sets stored as GeoTiff on a
 PC as well as on a portable device such as PPCs.
 
 %prep
-%setup -q -n %{oname}.%{reldate}
+%setup -q -n %{name}-%{version}
 
 %build
 %cmake_qt4
