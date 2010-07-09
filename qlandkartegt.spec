@@ -1,6 +1,6 @@
 %define name	qlandkartegt
 %define oname	QLandkarteGT
-%define version	0.18.1
+%define version	0.18.3
 %define release %mkrel 1
 
 Name: 	 	%{name}
@@ -8,7 +8,7 @@ Summary: 	Views and transfers data to a Garmin GPS receiver
 Version: 	%{version}
 Release: 	%{release}
 Source0:	http://ufpr.dl.sourceforge.net/sourceforge/qlandkartegt/%{name}-%{version}.tar.gz
-URL:		http://qlandkartegt.sourceforge.net/
+URL:		http://www.qlandkarte.org/
 License:	GPLv2+
 Group:		Communications
 BuildRoot:	%{_tmppath}/%{name}-buildroot
