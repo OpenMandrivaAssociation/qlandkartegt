@@ -1,6 +1,6 @@
 %define name	qlandkartegt
 %define oname	QLandkarteGT
-%define version	0.18.4
+%define version	0.18.5
 %define release %mkrel 1
 
 Name: 	 	%{name}
