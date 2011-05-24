@@ -8,6 +8,7 @@ Summary: 	Views and transfers data to a Garmin GPS receiver
 Version: 	%{version}
 Release: 	%{release}
 Source0:	http://downloads.sourceforge.net/qlandkartegt/%{name}-%{version}.tar.gz
+Patch0:		qlandkartegt-1.1.2-fix-str-fmt.patch
 URL:		http://www.qlandkarte.org/
 License:	GPLv2+
 Group:		Communications
@@ -32,9 +33,10 @@ PC as well as on a portable device such as PPCs.
 
 %prep
 %setup -q -n %{name}-%{version}
+%patch0 -p0 -b .str
 
 %build
-%cmake_qt4
+%cmake
 %make
 
 %install
