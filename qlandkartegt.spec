@@ -1,6 +1,6 @@
 %define name	qlandkartegt
 %define oname	QLandkarteGT
-%define version 1.1.2
+%define version 1.2.2
 %define release %mkrel 1
 
 Name: 	 	%{name}
@@ -33,7 +33,6 @@ PC as well as on a portable device such as PPCs.
 
 %prep
 %setup -q -n %{name}-%{version}
-%patch0 -p0 -b .str
 
 %build
 %cmake
