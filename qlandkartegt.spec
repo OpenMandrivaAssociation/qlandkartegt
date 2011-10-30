@@ -1,14 +1,15 @@
 %define name	qlandkartegt
 %define oname	QLandkarteGT
-%define version 1.2.2
+%define version 1.2.4
 %define release %mkrel 1
 
-Name: 	 	%{name}
-Summary: 	Views and transfers data to a Garmin GPS receiver
-Version: 	%{version}
-Release: 	%{release}
+Name:		%{name}
+Summary:	Views and transfers data to a Garmin GPS receiver
+Version:	%{version}
+Release:	%{release}
 Source0:	http://downloads.sourceforge.net/qlandkartegt/%{name}-%{version}.tar.gz
 Patch0:		qlandkartegt-1.1.2-fix-str-fmt.patch
+Patch1:		glu_include.patch
 URL:		http://www.qlandkarte.org/
 License:	GPLv2+
 Group:		Communications
@@ -16,6 +17,7 @@ Requires:	garmindev(interface) = 1.18
 Requires:	gpsbabel
 BuildRequires:	cmake
 BuildRequires:	qt4-devel
+BuildRequires:	zlib-devel
 BuildRequires:	gdal-devel
 BuildRequires:	proj-devel
 BuildRequires:	grass
@@ -33,14 +35,22 @@ PC as well as on a portable device such as PPCs.
 
 %prep
 %setup -q -n %{name}-%{version}
+%patch1 -p0
 
 %build
-%cmake
+%cmake -DGPX_EXTENSIONS=ON
 %make
 
 %install
 rm -rf $RPM_BUILD_ROOT
 %makeinstall_std -C build
+
+%__install -d "%{buildroot}%{_libdir}/%{name}"
+cp "build/lib/libSerialPort.so"	"%{buildroot}%{_libdir}/"
+cp "build/lib/libqzip.so"	"%{buildroot}%{_libdir}/"
+cp "build/lib/libqtexthtmlexporter.so"	"%{buildroot}%{_libdir}/"
+
+
 
 %if %mdkversion < 200900
 %post
@@ -52,10 +62,15 @@ rm -rf $RPM_BUILD_ROOT
 %clean_menus
 %endif
 
-%files 
-%defattr(-,root,root)
-%{_bindir}/*
+%files
+%defattr(-,root,root,-)
+%doc copying changelog.txt
+%{_bindir}/%{name}
+%{_bindir}/map2gcm
+%{_libdir}/libqtexthtmlexporter.so
+%{_libdir}/libSerialPort.so
+%{_libdir}/libqzip.so
+%{_datadir}/applications/%{name}.desktop
+%{_datadir}/pixmaps/%{name}.png
 %{_datadir}/%{name}
-%{_datadir}/applications/*.desktop
-%{_datadir}/pixmaps/qlandkartegt.png
-%{_mandir}/man1/*
+%{_mandir}/man1/%{name}.*
