@@ -16,7 +16,6 @@ BuildRequires:	mesaglu-devel
 BuildRequires:	zlib-devel
 BuildRequires:	gdal-devel
 BuildRequires:	proj-devel
-BuildRequires:	grass
 BuildRequires:	desktop-file-utils
 BuildRequires:	libexif-devel
 BuildRequires:	gpsd-devel
