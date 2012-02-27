@@ -1,7 +1,7 @@
 Name:		qlandkartegt
 Summary:	GPS device mapping tool
-Version:	1.3.2
-Release:	%mkrel 1
+Version:	1.4.0
+Release:	1
 Source0:	http://downloads.sourceforge.net/qlandkartegt/%{name}-%{version}.tar.gz
 Patch0:		qlandkartegt-1.3.0-fedora-glu.patch
 URL:		http://www.qlandkarte.org/
@@ -50,14 +50,9 @@ GDAL tools, but it will simplify their use to the demands of most users.
 %make VERBOSE=1
 
 %install
-%__rm -rf %{buildroot}
 %makeinstall_std -C build
 
-%clean
-%__rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root,-)
 %doc copying changelog.txt
 %{_bindir}/%{name}
 %{_bindir}/map2gcm
