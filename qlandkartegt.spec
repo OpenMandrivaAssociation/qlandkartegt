@@ -56,6 +56,8 @@ GDAL tools, but it will simplify their use to the demands of most users.
 %doc copying changelog.txt
 %{_bindir}/%{name}
 %{_bindir}/map2gcm
+%{_bindir}/cache2gtiff
+%{_bindir}/map2rmap
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/pixmaps/%{name}.png
 %{_datadir}/%{name}
