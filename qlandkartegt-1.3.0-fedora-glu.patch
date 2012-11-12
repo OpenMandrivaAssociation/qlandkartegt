@@ -1,0 +1,11 @@
+diff -up qlandkartegt-1.2.4/src/CMap3DWidget.cpp.glu qlandkartegt-1.2.4/src/CMap3DWidget.cpp
+--- qlandkartegt-1.2.4/src/CMap3DWidget.cpp.glu	2011-10-23 10:51:01.000000000 +0200
++++ qlandkartegt-1.2.4/src/CMap3DWidget.cpp	2011-10-23 10:51:24.000000000 +0200
+@@ -32,6 +32,7 @@
+ 
+ #include <QtGui>
+ #include <QtOpenGL>
++#include <GL/glu.h>
+ #include <QPixmap>
+ #include <QPainter>
+ #include <QGLPixelBuffer>
