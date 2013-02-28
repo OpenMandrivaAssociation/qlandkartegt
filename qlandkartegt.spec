@@ -1,6 +1,6 @@
 Name:		qlandkartegt
 Summary:	GPS device mapping tool
-Version:	1.5.1
+Version:	1.6.0
 Release:	1
 Source0:	http://downloads.sourceforge.net/qlandkartegt/%{name}-%{version}.tar.gz
 Patch0:		qlandkartegt-1.3.0-fedora-glu.patch
