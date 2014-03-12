@@ -12,7 +12,7 @@ Requires:	gpsbabel
 Suggests:	gdal
 BuildRequires:	cmake
 BuildRequires:	qt4-devel
-BuildRequires:	mesaglu-devel
+BuildRequires:	pkgconfig(gl)
 BuildRequires:	zlib-devel
 BuildRequires:	gdal-devel
 BuildRequires:	proj-devel
