@@ -1,6 +1,6 @@
 Name:		qlandkartegt
 Summary:	GPS device mapping tool
-Version:	1.6.0
+Version:	1.7.6
 Release:	1
 Source0:	http://downloads.sourceforge.net/qlandkartegt/%{name}-%{version}.tar.gz
 Patch0:		qlandkartegt-1.3.0-fedora-glu.patch
@@ -12,7 +12,8 @@ Requires:	gpsbabel
 Suggests:	gdal
 BuildRequires:	cmake
 BuildRequires:	qt4-devel
-BuildRequires:	mesaglu-devel
+BuildRequires:	pkgconfig(gl)
+BuildRequires:	pkgconfig(glu)
 BuildRequires:	zlib-devel
 BuildRequires:	gdal-devel
 BuildRequires:	proj-devel
@@ -20,6 +21,7 @@ BuildRequires:	desktop-file-utils
 BuildRequires:	libexif-devel
 BuildRequires:	gpsd-devel
 BuildRequires:	libdmtx-devel
+BuildRequires:	pkgconfig(QtWebKit)
 Obsoletes:	qlandkarte < %{version}
 Provides:	qlandkarte = %{version}
 
