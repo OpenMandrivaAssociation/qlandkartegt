@@ -20,6 +20,7 @@ BuildRequires:	desktop-file-utils
 BuildRequires:	libexif-devel
 BuildRequires:	gpsd-devel
 BuildRequires:	libdmtx-devel
+BuildRequires:	pkgconfig(QtWebKit)
 Obsoletes:	qlandkarte < %{version}
 Provides:	qlandkarte = %{version}
 
