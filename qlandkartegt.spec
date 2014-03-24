@@ -13,6 +13,7 @@ Suggests:	gdal
 BuildRequires:	cmake
 BuildRequires:	qt4-devel
 BuildRequires:	pkgconfig(gl)
+BuildRequires:	pkgconfig(glu)
 BuildRequires:	zlib-devel
 BuildRequires:	gdal-devel
 BuildRequires:	proj-devel
