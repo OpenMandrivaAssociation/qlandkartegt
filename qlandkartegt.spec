@@ -1,6 +1,6 @@
 Name:		qlandkartegt
 Summary:	GPS device mapping tool
-Version:	1.7.6
+Version:	1.7.7
 Release:	1
 Source0:	http://downloads.sourceforge.net/qlandkartegt/%{name}-%{version}.tar.gz
 Patch0:		qlandkartegt-1.3.0-fedora-glu.patch
@@ -12,16 +12,19 @@ Requires:	gpsbabel
 Suggests:	gdal
 BuildRequires:	cmake
 BuildRequires:	qt4-devel
-BuildRequires:	pkgconfig(gl)
-BuildRequires:	pkgconfig(glu)
-BuildRequires:	zlib-devel
-BuildRequires:	gdal-devel
-BuildRequires:	proj-devel
-BuildRequires:	desktop-file-utils
-BuildRequires:	libexif-devel
-BuildRequires:	gpsd-devel
-BuildRequires:	libdmtx-devel
+%if %{mdvver} == 201400
 BuildRequires:	pkgconfig(QtWebKit)
+%endif
+BuildRequires:	pkgconfig(glu)
+BuildRequires:	pkgconfig(zlib)
+BuildRequires:	gdal-devel
+BuildRequires:	pkgconfig(proj)
+BuildRequires:	desktop-file-utils
+BuildRequires:	pkgconfig(libexif)
+BuildRequires:	pkgconfig(libgpsd)
+BuildRequires:	pkgconfig(libdmtx)
+BuildRequires:  jpeg-devel
+
 Obsoletes:	qlandkarte < %{version}
 Provides:	qlandkarte = %{version}
 
@@ -53,11 +56,15 @@ GDAL tools, but it will simplify their use to the demands of most users.
 
 %install
 %makeinstall_std -C build
+desktop-file-validate %{buildroot}%{_datadir}/applications/%{name}.desktop
 
 %files
 %doc copying changelog.txt
 %{_bindir}/%{name}
-%{_bindir}/map2*
+%{_bindir}/map2gcm
+%{_bindir}/map2jnx
+%{_bindir}/map2rmap
+%{_bindir}/map2rmp
 %{_bindir}/cache2gtiff
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/pixmaps/%{name}.png
