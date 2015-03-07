@@ -12,9 +12,7 @@ Requires:	gpsbabel
 Suggests:	gdal
 BuildRequires:	cmake
 BuildRequires:	qt4-devel
-%if %{mdvver} == 201400
 BuildRequires:	pkgconfig(QtWebKit)
-%endif
 BuildRequires:	pkgconfig(glu)
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	gdal-devel
