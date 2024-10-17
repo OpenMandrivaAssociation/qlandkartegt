@@ -4,7 +4,7 @@ Version:	1.8.1
 Release:	3
 Source0:	http://downloads.sourceforge.net/qlandkartegt/%{name}-%{version}.tar.gz
 Patch0:		qlandkartegt-1.3.0-fedora-glu.patch
-URL:		http://www.qlandkarte.org/
+URL:		https://www.qlandkarte.org/
 License:	GPLv2+
 Group:		Communications
 Requires:	garmindev(interface) = 1.18
